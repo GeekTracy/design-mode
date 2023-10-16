@@ -1,8 +1,8 @@
 package com.geek.tracy.designmode.factorymethod;
 
-import com.geek.tracy.designmode.factorymethod.factory.CoffeeAmericanoFactory;
-import com.geek.tracy.designmode.factorymethod.factory.CoffeeFactory;
-import com.geek.tracy.designmode.factorymethod.factory.CoffeeLatteFactory;
+import com.geek.tracy.designmode.factorymethod.factory.CoffeeAmericanoFactoryMethod;
+import com.geek.tracy.designmode.factorymethod.factory.CoffeeFactoryMethod;
+import com.geek.tracy.designmode.factorymethod.factory.CoffeeLatteFactoryMethod;
 import com.geek.tracy.designmode.factorymethod.product.Coffee;
 
 /**
@@ -15,13 +15,13 @@ public class CoffeeShop {
     /**
      * 咖啡工厂，用来生产对应的产品咖啡
      */
-    private CoffeeFactory factory;
+    private CoffeeFactoryMethod factory;
 
     /**
      * 获取咖啡工厂
      * @return 咖啡工厂
      */
-    public CoffeeFactory getFactory() {
+    public CoffeeFactoryMethod getFactory() {
         return factory;
     }
 
@@ -29,7 +29,7 @@ public class CoffeeShop {
      * 设置咖啡工厂
      * @param factory 咖啡工厂
      */
-    public void setFactory(CoffeeFactory factory) {
+    public void setFactory(CoffeeFactoryMethod factory) {
         this.factory = factory;
     }
 
@@ -38,7 +38,7 @@ public class CoffeeShop {
      */
     public Coffee orderLatte() {
         // 设置拿铁工厂
-        this.setFactory(new CoffeeLatteFactory());
+        this.setFactory(new CoffeeLatteFactoryMethod());
         // 在拿铁工厂制作拿铁咖啡
         Coffee coffee = this.getFactory().makeCoffee();
         coffee.addMilk();
@@ -51,7 +51,7 @@ public class CoffeeShop {
      */
     public Coffee orderAmericano() {
         // 设置美式工厂
-        this.setFactory(new CoffeeAmericanoFactory());
+        this.setFactory(new CoffeeAmericanoFactoryMethod());
         // 在美式工厂之所美式咖啡
         Coffee coffee = factory.makeCoffee();
         coffee.addMilk();

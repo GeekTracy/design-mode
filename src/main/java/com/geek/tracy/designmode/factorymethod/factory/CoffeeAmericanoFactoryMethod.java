@@ -8,7 +8,7 @@ import com.geek.tracy.designmode.factorymethod.product.CoffeeLatte;
  * @Author Tracy
  * @Date 2023/10/9
  */
-public class CoffeeAmericanoFactory implements CoffeeFactory{
+public class CoffeeAmericanoFactoryMethod implements CoffeeFactoryMethod {
     @Override
     public Coffee makeCoffee() {
         return new CoffeeLatte("coffee americano");

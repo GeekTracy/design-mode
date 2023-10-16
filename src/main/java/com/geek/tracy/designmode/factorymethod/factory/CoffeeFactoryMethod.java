@@ -7,7 +7,7 @@ import com.geek.tracy.designmode.factorymethod.product.Coffee;
  * @Author Tracy
  * @Date 2023/10/9
  */
-public interface CoffeeFactory {
+public interface CoffeeFactoryMethod {
 
     /** 工厂方法：创建咖啡产品 */
     Coffee makeCoffee();
