@@ -22,6 +22,8 @@ public class CarProxy implements Car{
      */
     @Override
     public void drive() {
+        System.out.println("静态代理，执行前增强");
         car.drive();
+        System.out.println("静态代理，执行后增强");
     }
 }
