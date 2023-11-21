@@ -1,8 +1,8 @@
-package com.geek.tracy.designmode.b6_adapter;
+package com.geek.tracy.designmode.b7_adapter;
 
-import com.geek.tracy.designmode.b6_adapter.bean.IUserInfo;
-import com.geek.tracy.designmode.b6_adapter.bean.OuterUserInfo;
-import com.geek.tracy.designmode.b6_adapter.bean.UserInfo;
+import com.geek.tracy.designmode.b7_adapter.bean.IUserInfo;
+import com.geek.tracy.designmode.b7_adapter.bean.OuterUserInfo;
+import com.geek.tracy.designmode.b7_adapter.bean.UserInfo;
 
 /**
  * @Author Tracy

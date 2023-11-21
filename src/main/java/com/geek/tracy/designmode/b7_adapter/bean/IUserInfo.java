@@ -1,4 +1,4 @@
-package com.geek.tracy.designmode.b6_adapter.bean;
+package com.geek.tracy.designmode.b7_adapter.bean;
 
 /**
  * 员工信息接口
