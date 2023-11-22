@@ -32,7 +32,7 @@ public class ProxyTest {
     @Test
     public void dynamicProxyTest() {
         // JDK的动态代理类生成的class文件保存到本地
-//        System.getProperties().put("sun.misc.ProxyGenerator.save.saveGeneratedFiles", "true");
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         // 动态创建代理类，
         Car carProxy = (Car) Proxy.newProxyInstance(Car.class.getClassLoader(),
                 new Class[]{Car.class},
