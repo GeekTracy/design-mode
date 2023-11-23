@@ -13,7 +13,7 @@
     1）可以很方便的对代理类的方法进行统一处理。
     2）不用为每一个目标类(需要增强的类)单独编写代理类。
 
-拓展：动态代理
+拓展1：动态代理
 动态代理的实现，由抽象对象、被代理对象、动态代理类InvocationHandler三部分实现，被代理对象实现抽象接口的实现方法。代理对象实现了构造方法，入参
 传入具体的被代理对象，且实现了InvocationHandler的invoke方法，客户端调用的时候通过创建代理对象，并传入具体的被代理对象来获取具体对象的功能方法
 实现。
@@ -46,6 +46,16 @@ Hello hello = (Hello) Proxy.newProxyInstance(
     }
 );
 hello.morning("hello world");
+
+
+拓展2：CGLIB(Code Generation Library)代理 -- 基于目标类生成该类的一个子类作为代理类，目标类必须可以继承。
+与动态代理区别：CGLIB相比于JDK动态代理更加强大，JDK动态代理只能对接口进行代理，而CGLIB既可以代理普通类，也能够代理接口。
+
+实现步骤：
+    1）创建Enhancer实例；
+    2）通过setSuperclass方法来设置目标类；
+    3）通过setCallback方法来设置拦截对象；
+    4）create方法生成Target的代理类，并返回代理类的实例；
 
 
 
