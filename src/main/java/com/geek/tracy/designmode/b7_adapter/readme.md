@@ -15,11 +15,11 @@
 
 **示例：单接口适配：**
 
-> IUserInfo -- 内部用户接口
-        |-- UserInfo      -- 内部用户类（实现类）
-        |-- OuterUserInfo -- 外部对象类Adapter（实现类，实现同UserInfo类一样的功能，增加适配逻辑，对外部使用者无感知），同时继承：OuterUser
-        |-- IOuterUser  -- 外部对象接口
-        |-- OuterUser   -- 外部用户类（实现类）
+> IUserInfo -- 内部用户接口    
+        |-- UserInfo      -- 内部用户类（实现类）    
+        |-- OuterUserInfo -- 外部对象类Adapter（实现类，实现同UserInfo类一样的功能，增加适配逻辑，对外部使用者无感知），同时继承：OuterUser    
+        |-- IOuterUser  -- 外部对象接口    
+        |-- OuterUser   -- 外部用户类（实现类）    
 
 
 说明：外部用户类OuterUser用于获取外部用户信息，外部对象类Adapter OuterUserInfo，通过父类OuterUser获取到的外部员工的数据，按照IUserInfo接口进行组装。从而实现外部IOuterUser到IUserInfo的适配操作。
